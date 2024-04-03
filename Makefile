@@ -39,6 +39,7 @@ re: fclean all
 
 .PHONY: all clean fclean re libft
 
-#make all libft
-#copy libft.a to li
-#
+#create archive of all libft object files (libft.a)
+#libftprintf.a = libft.a + ft_printf object files
+#create copy of libft.a (libftprintf.a)
+#add ft_printf object files to copy
