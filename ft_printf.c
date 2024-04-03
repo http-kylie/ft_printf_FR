@@ -30,7 +30,7 @@ int	ft_formats(char c, va_list inputs)
 	else if (c == 'u')
 		printed += ft_putunint(va_arg(inputs, unsigned int));
 	else if (c == 'x' || c == 'X')
-		printed += ft_puthex(va_arg(inputs, unsigned long), c);
+		printed += ft_puthex(va_arg(inputs, unsigned), c);
 	return (printed);
 }
 
@@ -56,9 +56,9 @@ int	ft_printf(const char *format, ...)
 int main()
 {
 	char	*s = 0;
-	int		n = -2147483648;
-	int ret1 = ft_printf("mine: [%s]\n", s);
-	int ret2 = printf("real: [%s]\n", s);
+	unsigned int		n = 18446744073709551614;
+	int ret1 = ft_printf("mine: [%x]\n", n);
+	int ret2 = printf("real: [%x]\n", n);
 	printf("\nmine: %i || real: %i\n", ret1, ret2);
 }
 */

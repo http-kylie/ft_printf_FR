@@ -12,16 +12,16 @@
 
 #include "ft_printf.h"
 
-int	ft_puthex(unsigned long int n, char specifier) //take it as a long
+int	ft_puthex(unsigned long int n, char specifier)
 {
 	int		len;
 
 	len = 0;
 	if (specifier != 'p')
-		n = (unsigned)n; //for x and X
+		n = (unsigned)n;
 	if (n > 15)
 		len += ft_puthex(n / 16, specifier);
-	if (specifier == 'X') //switch this to 'X'
+	if (specifier == 'X')
 		len += ft_putchar("0123456789ABCDEF"[n % 16]);
 	else
 		len += ft_putchar("0123456789abcdef"[n % 16]);
