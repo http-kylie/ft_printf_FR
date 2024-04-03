@@ -18,12 +18,13 @@
 # include <unistd.h>
 # include <stdint.h>
 
-#if defined(_WIN32) || defined(WIN32) || defined(__CYGWIN__) || defined(__MINGW32__)
-	# define NIL "(nil)"
-#elif defined(__linux__)
+
+#if defined(__linux__)
 	# define NIL "(nil)"
 #elif defined(__APPLE__) && defined(__MACH__)
 	# define NIL "0x0"
+#elif defined(_WIN32) || defined(WIN32) || defined(__CYGWIN__) || defined(__MINGW32__)
+	# define NIL "(nil)"
 #endif
 
 int		ft_putchar(unsigned int c);

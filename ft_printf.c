@@ -55,10 +55,11 @@ int	ft_printf(const char *format, ...)
 #include <stdio.h>
 int main()
 {
-	char	*s = 0;
-	unsigned int		n = 18446744073709551614;
-	int ret1 = ft_printf("mine: [%x]\n", n);
-	int ret2 = printf("real: [%x]\n", n);
+	void			*p = 0;
+	//unsigned int	n = 18446;
+
+	int ret1 = ft_printf("mine: [%p]\n", p);
+	int ret2 = printf("real: [%p]\n", p);
 	printf("\nmine: %i || real: %i\n", ret1, ret2);
 }
 */

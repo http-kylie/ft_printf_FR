@@ -21,8 +21,8 @@ LIBFT			=	$(LIBFT_PATH)/libft.a
 all: $(NAME)
 
 $(NAME): $(LIBFT) $(OBJS)
-	cp	$(LIBFT) $(NAME)
-	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+	cp $(LIBFT) $(NAME)
+	$(ARCHIVE) $(NAME) $(OBJS)
 
 $(LIBFT):
 	make -C $(LIBFT_PATH) all
